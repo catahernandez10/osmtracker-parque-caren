@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layouts>
+  <layout name="root">
+    <row>
+      <button type="layout" label="ESPECIE" target="especie" />
+      <button type="layout" label="REPRODUCCION" target="reproduccion" />
+    </row>
+    <row>
+      <button type="layout" label="COND. CORPORAL" target="condicion_corporal" />
+      <button type="layout" label="SALUD" target="salud" />
+    </row>
+    <row>
+      <button type="layout" label="FISICAS" target="fisicas" />
+      <button type="picture" label="FOTO" />
+    </row>
+    <row>
+      <button type="textnote" label="MARCAS / NOTA" />
+    </row>
+  </layout>
+
+  <layout name="especie">
+    <row><button type="tag" label="ESPECIE_CANINO"/><button type="tag" label="ESPECIE_FELINO"/></row>
+    <row><button type="layout" label="VOLVER" target="root"/></row>
+  </layout>
+
+  <layout name="reproduccion">
+    <row><button type="layout" label="CANINO" target="rep_canino"/><button type="layout" label="FELINO" target="rep_felino"/></row>
+    <row><button type="layout" label="VOLVER" target="root"/></row>
+  </layout>
+  <layout name="rep_canino">
+    <row><button type="tag" label="REP_CAN_HEMBRA"/><button type="tag" label="REP_CAN_HEMBRA_LACTANTE"/></row>
+    <row><button type="tag" label="REP_CAN_MACHO_CASTRADO"/><button type="tag" label="REP_CAN_MACHO_NO_CASTRADO"/></row>
+    <row><button type="tag" label="REP_CAN_ADULTO_SEXO_DESCONOCIDO"/><button type="tag" label="REP_CAN_CACHORRO"/></row>
+    <row><button type="layout" label="VOLVER" target="reproduccion"/></row>
+  </layout>
+  <layout name="rep_felino">
+    <row><button type="tag" label="REP_FEL_HEMBRA"/><button type="tag" label="REP_FEL_HEMBRA_LACTANTE"/></row>
+    <row><button type="tag" label="REP_FEL_MACHO_CASTRADO"/><button type="tag" label="REP_FEL_MACHO_NO_CASTRADO"/></row>
+    <row><button type="tag" label="REP_FEL_ADULTO_SEXO_DESCONOCIDO"/><button type="tag" label="REP_FEL_CORTE_OREJA_O_TATUAJE"/></row>
+    <row><button type="tag" label="REP_FEL_GATITO_MENOR_6M"/></row>
+    <row><button type="layout" label="VOLVER" target="reproduccion"/></row>
+  </layout>
+
+  <layout name="condicion_corporal">
+    <row><button type="tag" label="CC_1_MUY_DELGADO"/><button type="tag" label="CC_2_DELGADO"/></row>
+    <row><button type="tag" label="CC_3_IDEAL"/><button type="tag" label="CC_4_SOBREPESO"/></row>
+    <row><button type="tag" label="CC_5_OBESO"/><button type="tag" label="CC_INDETERMINADO"/></row>
+    <row><button type="layout" label="VOLVER" target="root"/></row>
+  </layout>
+
+  <layout name="salud">
+    <row><button type="layout" label="ALOPECIA" target="alopecia"/><button type="layout" label="AUM. VOLUMEN" target="volumen"/></row>
+    <row><button type="layout" label="HERIDAS" target="heridas"/><button type="layout" label="CLAUDICACION" target="claudicacion"/></row>
+    <row><button type="layout" label="VOLVER" target="root"/></row>
+  </layout>
+
+  <layout name="alopecia">
+    <row><button type="tag" label="ALOPECIA_PRESENTE"/><button type="tag" label="ALOPECIA_AUSENTE"/><button type="tag" label="ALOPECIA_INDETERMINADO"/></row>
+    <row><button type="layout" label="ZONA" target="zona_alopecia"/><button type="layout" label="VOLVER" target="salud"/></row>
+  </layout>
+  <layout name="zona_alopecia">
+    <row><button type="tag" label="ALOPECIA_CABEZA"/><button type="tag" label="ALOPECIA_CUELLO"/><button type="tag" label="ALOPECIA_TORAX"/></row>
+    <row><button type="tag" label="ALOPECIA_ABDOMEN"/><button type="tag" label="ALOPECIA_EAI"/><button type="tag" label="ALOPECIA_EAD"/></row>
+    <row><button type="tag" label="ALOPECIA_EPI"/><button type="tag" label="ALOPECIA_EPD"/><button type="tag" label="ALOPECIA_COLA"/></row>
+    <row><button type="layout" label="VOLVER" target="alopecia"/></row>
+  </layout>
+
+  <layout name="volumen">
+    <row><button type="tag" label="VOLUMEN_PRESENTE"/><button type="tag" label="VOLUMEN_AUSENTE"/><button type="tag" label="VOLUMEN_INDETERMINADO"/></row>
+    <row><button type="layout" label="ZONA" target="zona_volumen"/><button type="layout" label="VOLVER" target="salud"/></row>
+  </layout>
+  <layout name="zona_volumen">
+    <row><button type="tag" label="VOLUMEN_CABEZA"/><button type="tag" label="VOLUMEN_CUELLO"/><button type="tag" label="VOLUMEN_TORAX"/></row>
+    <row><button type="tag" label="VOLUMEN_ABDOMEN"/><button type="tag" label="VOLUMEN_EAI"/><button type="tag" label="VOLUMEN_EAD"/></row>
+    <row><button type="tag" label="VOLUMEN_EPI"/><button type="tag" label="VOLUMEN_EPD"/><button type="tag" label="VOLUMEN_COLA"/></row>
+    <row><button type="layout" label="VOLVER" target="volumen"/></row>
+  </layout>
+
+  <layout name="heridas">
+    <row><button type="tag" label="HERIDA_PRESENTE"/><button type="tag" label="HERIDA_AUSENTE"/><button type="tag" label="HERIDA_INDETERMINADO"/></row>
+    <row><button type="layout" label="ZONA" target="zona_herida"/><button type="layout" label="VOLVER" target="salud"/></row>
+  </layout>
+  <layout name="zona_herida">
+    <row><button type="tag" label="HERIDA_CABEZA"/><button type="tag" label="HERIDA_CUELLO"/><button type="tag" label="HERIDA_TORAX"/></row>
+    <row><button type="tag" label="HERIDA_ABDOMEN"/><button type="tag" label="HERIDA_EAI"/><button type="tag" label="HERIDA_EAD"/></row>
+    <row><button type="tag" label="HERIDA_EPI"/><button type="tag" label="HERIDA_EPD"/><button type="tag" label="HERIDA_COLA"/></row>
+    <row><button type="layout" label="VOLVER" target="heridas"/></row>
+  </layout>
+
+  <layout name="claudicacion">
+    <row><button type="tag" label="CLAUD_PRESENTE"/><button type="tag" label="CLAUD_AUSENTE"/><button type="tag" label="CLAUD_INDETERMINADO"/></row>
+    <row><button type="layout" label="EXTREMIDAD" target="zona_claud"/><button type="layout" label="VOLVER" target="salud"/></row>
+  </layout>
+  <layout name="zona_claud">
+    <row><button type="tag" label="CLAUD_EAI"/><button type="tag" label="CLAUD_EAD"/></row>
+    <row><button type="tag" label="CLAUD_EPI"/><button type="tag" label="CLAUD_EPD"/></row>
+    <row><button type="layout" label="VOLVER" target="claudicacion"/></row>
+  </layout>
+
+  <layout name="fisicas">
+    <row><button type="layout" label="TAMANO" target="tamano"/><button type="layout" label="COLLAR" target="collar"/></row>
+    <row><button type="textnote" label="COLOR"/><button type="textnote" label="PATRON PELAJE"/></row>
+    <row><button type="textnote" label="MARCAS PARTICULARES"/><button type="picture" label="FOTO"/></row>
+    <row><button type="layout" label="VOLVER" target="root"/></row>
+  </layout>
+  <layout name="tamano">
+    <row><button type="tag" label="TAMANO_GRANDE"/><button type="tag" label="TAMANO_MEDIANO"/><button type="tag" label="TAMANO_PEQUENO"/></row>
+    <row><button type="layout" label="VOLVER" target="fisicas"/></row>
+  </layout>
+  <layout name="collar">
+    <row><button type="tag" label="COLLAR_PRESENTE"/><button type="tag" label="COLLAR_AUSENTE"/></row>
+    <row><button type="layout" label="VOLVER" target="fisicas"/></row>
+  </layout>
+</layouts>
